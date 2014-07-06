@@ -9,8 +9,11 @@
       eshell-cmpl-dir-ignore "\\`\\(\\.\\.?\\|CVS\\|\\.svn\\|\\.git\\|\\.idea\\)/\\'")
 (add-hook 'eshell-mode-hook
           '(lambda ()
-	     (setenv "PAGER" "cat") ;; Set the pager
+             (setenv "PAGER" "cat") ;; Set the pager
              (setenv "PATH" "$HOME/git/various/bin:/opt/bin:$HOME/.opt/bin:$HOME/.opt/bin:/opt/jdk1.7/bin:/opt/apache-maven/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/opt/apache-ant/bin:/opt/jdk1.7/bin:/opt/apache-maven/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/opt/apache-ant/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/bin")
+             (local-set-key (kbd "C-l") 'eshell/clear)
+             (local-set-key (kbd "M-j") 'recenter-top-bottom)
+             (local-set-key (kbd "C-u") 'eshell/clear-line)
              ))
 
 ;; Bookmark integration
@@ -121,8 +124,6 @@ Concatenate FILE(s), or standard input, to standard output.")
      ;; if the file does not end in a newline, do not emit one
      )))
 
-
-
 (defun eshell/clear ()
   "Clear the buffer."
   (interactive)
@@ -157,6 +158,12 @@ line 42 in the buffer for foo.."
       (eshell-view-file (pop args)))))
 (defalias 'eshell/more 'eshell/less)
 (defalias 'eshell/most 'eshell/less)
+(defun eshell/clear-line ()
+  "Clear the current line in an eshell buffer."
+  (interactive)
+  (eshell-bol)
+  (kill-line)
+    )
 (defun string/starts-with (s begins)
   "returns non-nil if string S starts with BEGINS.  Else nil."
   (cond ((>= (length s) (length begins))
