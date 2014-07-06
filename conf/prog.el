@@ -24,3 +24,5 @@
             (when (derived-mode-p 'c-mode 'c++-mode 'java-mode)
               (ggtags-mode 1))))
 
+(require 'ffap-gcc-path)
+(require 'ffap-g++-path)

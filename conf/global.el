@@ -5,8 +5,6 @@
 (require-or-install 'js2-mode)
 (require 'uniquify) ;; For better naming style.
 (require-or-install 'ffap)
-(require 'ffap-gcc-path)
-(require 'ffap-g++-path)
 (require-or-install 'hide-comnt)
 (require-or-install 'gnuplot)
 (require-or-install 'expand-region) ;; FIXME: For what?
