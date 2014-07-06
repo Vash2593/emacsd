@@ -1,0 +1,6 @@
+;;;;;;;;;;;;;;
+;; Protobuf ;;
+;;;;;;;;;;;;;;
+
+(require-or-install 'protobuf-mode)
+(add-to-list 'auto-mode-alist '(".proto" . protobuf-mode))
