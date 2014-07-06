@@ -1,6 +1,6 @@
 ;; -*- mode: Lisp eval: (rainbow-mode) -*-
 ;; Emacs configuration
-;; Time-stamp: <2014-07-06 12:26:45 vash>
+;; Time-stamp: <2014-07-06 13:09:32 vash>
 
 ;; Bootstrap
 (load-file "~/.emacs.d/conf/functions.el")
@@ -23,34 +23,31 @@
  )
 
 ;; Ok, let's start all module needed.
-(load-file "~/.emacs.d/conf/compilation.el")
-(load-file "~/.emacs.d/conf/ediff.el")
-(load-file "~/.emacs.d/conf/erc.el")
-(load-file "~/.emacs.d/conf/eshell.el")
-(load-file "~/.emacs.d/conf/face.el")
-(load-file "~/.emacs.d/conf/flymake.el")
-
-(load-file "~/.emacs.d/conf/general.el")
-(load-file "~/.emacs.d/conf/ggtags.el")
-(load-file "~/.emacs.d/conf/git.el")
-(load-file "~/.emacs.d/conf/global.el")
-(load-file "~/.emacs.d/conf/ibuffer.el")
-(load-file "~/.emacs.d/conf/java.el")
-(load-file "~/.emacs.d/conf/log.el")
+;; For all systems, load these configuration files.
 (load-file "~/.emacs.d/conf/minor-global.el")
-(load-file "~/.emacs.d/conf/org-mode.el")
-(load-file "~/.emacs.d/conf/prog.el")
-(load-file "~/.emacs.d/conf/protobuf.el")
-(load-file "~/.emacs.d/conf/sauron.el")
-(load-file "~/.emacs.d/conf/shell.el")
-(load-file "~/.emacs.d/conf/yasnippet.el")
-
-;; Triggers
-(load-file "~/.emacs.d/conf/triggers.el")
-
-;;;;;;;;;;;;;;;;;;;;;;;
-;; Personal Settings ;;
-;;;;;;;;;;;;;;;;;;;;;;;
+(load-file "~/.emacs.d/conf/ibuffer.el")
+(load-file "~/.emacs.d/conf/general.el")
 (load-file "~/.emacs.d/conf/pers.el")
-
-(load-file "~/.emacs.d/conf/emms.el")
+(load-file "~/.emacs.d/conf/global.el")
+(load-file "~/.emacs.d/conf/face.el")
+(load-file "~/.emacs.d/conf/erc.el")
+(when (string= system-name "alia")
+  (progn
+    (load-file "~/.emacs.d/conf/compilation.el")
+    (load-file "~/.emacs.d/conf/ediff.el")
+    (load-file "~/.emacs.d/conf/eshell.el")
+    (load-file "~/.emacs.d/conf/flymake.el")
+    (load-file "~/.emacs.d/conf/ggtags.el")
+    (load-file "~/.emacs.d/conf/git.el")
+    (load-file "~/.emacs.d/conf/java.el")
+    (load-file "~/.emacs.d/conf/log.el")
+    (load-file "~/.emacs.d/conf/org-mode.el")
+    (load-file "~/.emacs.d/conf/prog.el")
+    (load-file "~/.emacs.d/conf/protobuf.el")
+    (load-file "~/.emacs.d/conf/sauron.el")
+    (load-file "~/.emacs.d/conf/shell.el")
+    (load-file "~/.emacs.d/conf/yasnippet.el")
+    (load-file "~/.emacs.d/conf/triggers.el")
+    (load-file "~/.emacs.d/conf/emms.el")
+    )
+  )
