@@ -1,6 +1,6 @@
 ;; -*- mode: Lisp eval: (rainbow-mode) -*-
 ;; Emacs configuration
-;; Time-stamp: <2014-07-06 13:09:32 vash>
+;; Time-stamp: <2014-07-06 13:21:52 vash>
 
 ;; Bootstrap
 (load-file "~/.emacs.d/conf/functions.el")
@@ -24,11 +24,11 @@
 
 ;; Ok, let's start all module needed.
 ;; For all systems, load these configuration files.
+(load-file "~/.emacs.d/conf/global.el")
 (load-file "~/.emacs.d/conf/minor-global.el")
 (load-file "~/.emacs.d/conf/ibuffer.el")
 (load-file "~/.emacs.d/conf/general.el")
 (load-file "~/.emacs.d/conf/pers.el")
-(load-file "~/.emacs.d/conf/global.el")
 (load-file "~/.emacs.d/conf/face.el")
 (load-file "~/.emacs.d/conf/erc.el")
 (when (string= system-name "alia")
