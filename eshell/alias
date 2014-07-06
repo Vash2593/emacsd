@@ -1,0 +1,17 @@
+alias d dired $1
+alias emms-artist emms-browse-by-artist
+alias emms-artists emms-browse-by-artists
+alias emms-album emms-browse-by-album
+alias emms-add emms-add-directory-tree $1
+alias e eshell-source-file $1
+alias ff find-file $1
+alias clean rm -fv *~ .*~ 2>/dev/null
+alias magit magit-status .
+alias fd find-dired $1 ""
+alias ls-album emms-browse-by-album
+alias top proced
+alias ff find-file $1
+alias ddg duckduckgo $1
+alias magit magit-status .
+alias log magit-log
+alias ls-artist emms-browse-by-artist
