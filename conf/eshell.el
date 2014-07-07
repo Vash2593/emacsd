@@ -10,7 +10,7 @@
 (add-hook 'eshell-mode-hook
           '(lambda ()
              (setenv "PAGER" "cat") ;; Set the pager
-             (setenv "PATH" "$HOME/git/various/bin:/opt/bin:$HOME/.opt/bin:$HOME/.opt/bin:/opt/jdk1.7/bin:/opt/apache-maven/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/opt/apache-ant/bin:/opt/jdk1.7/bin:/opt/apache-maven/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/opt/apache-ant/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/bin")
+             (setenv "PATH" "$HOME/.bin:$HOME/git/various/bin::/opt/bin:$HOME/.opt/bin:$HOME/.opt/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/sbin/:/sbin/")
              (local-set-key (kbd "C-l") 'eshell/clear)
              (local-set-key (kbd "M-j") 'recenter-top-bottom)
              (local-set-key (kbd "C-u") 'eshell/clear-line)
