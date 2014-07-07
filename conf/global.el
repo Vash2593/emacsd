@@ -7,7 +7,6 @@
 (require-or-install 'ffap)
 (require-or-install 'hide-comnt)
 (require-or-install 'gnuplot)
-(require-or-install 'expand-region) ;; FIXME: For what?
 
 (global-set-key (kbd "C-z") nil)
 (global-unset-key (kbd "C-x 1"))
@@ -39,9 +38,6 @@
 ;; Set the windows move with the meta key
 (windmove-default-keybindings nil)
 
-(global-unset-key (kbd "C-x c"))
-(global-unset-key (kbd "C-x o"))
-
 ;; Tabulation are evil
 (setq-default indent-tabs-mode nil)
 (setq default-tab-width 4) ;; Build set it to two when found
@@ -52,7 +48,6 @@
 (defun revert-buffer-no-confirm ()
   "Revert buffer without confirmation."
   (interactive) (revert-buffer t t))
-;; FFAP ;;
 (global-set-key (kbd "C-z o") 'ffap)
 
 
