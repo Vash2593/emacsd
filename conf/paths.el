@@ -7,20 +7,19 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
-(setq elpa-dir "~/.emacs.d/elpa/")
+
+;; Move elpa dir. Previously to distant server. Too long to start
+(setq elpa-dir "~/.emacs.d/elpa/") ;; If file ssh:/emacs@od:emacsd exists load it.
 (setq package-user-dir elpa-dir)
 
-(require-or-install 'tramp) ;; We need tramp for the next line
+;; Set elpa dir to =elpa-dir=.
 (let ((default-directory elpa-dir))
-      (normal-top-level-add-subdirs-to-load-path))
+  (normal-top-level-add-subdirs-to-load-path))
+
 (let ((default-directory "~/.emacs.d/lisp"))
   (normal-top-level-add-subdirs-to-load-path))
-(load-file "~/.emacs.d/lisp/personal-functions.el")
-;; FIXME: (load-file "~/.emacs.d/ws-trim.el")
-;(load-file "~/.emacs.d/doc-mode.el")
-;(add-to-list 'load-path "~/git/org-mode/lisp")
-(add-to-list 'load-path "~/.emacs.d/lisp/multiple-cursors")
+(load-file "~/.emacs.d/lisp/personal-functions.el")e
 (add-to-list 'load-path "~/.emacs.d/lisp")
-(add-to-list 'load-path "~/.emacs.d/erc-5.3-extras")
-(add-to-list 'load-path "~/git/expand-region")
-(add-to-list 'load-path "~/.opt/share/emacs/24.3.50/lisp/org")
+;; FIXME: (add-to-list 'load-path "~/.emacs.d/erc-5.3-extras")
+;; FIXME: (add-to-list 'load-path "~/git/expand-region")
+;; FIXME: (add-to-list 'load-path "~/.opt/share/emacs/24.3.50/lisp/org")
