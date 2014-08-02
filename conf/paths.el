@@ -18,7 +18,7 @@
 
 (let ((default-directory "~/.emacs.d/lisp"))
   (normal-top-level-add-subdirs-to-load-path))
-(load-file "~/.emacs.d/lisp/personal-functions.el")e
+(load-file "~/.emacs.d/lisp/personal-functions.el")
 (add-to-list 'load-path "~/.emacs.d/lisp")
 ;; FIXME: (add-to-list 'load-path "~/.emacs.d/erc-5.3-extras")
 ;; FIXME: (add-to-list 'load-path "~/git/expand-region")
